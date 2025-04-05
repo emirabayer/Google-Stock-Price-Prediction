@@ -11,30 +11,43 @@ This project predicts Google stock prices using a Long Short-Term Memory (LSTM) 
 <br>
 
 ## Learning Process & Knowledge Gained
+
 1. **Data Preprocessing**:
   - Converted Close from string to numeric, handling commas with pd.to_numeric(errors='coerce').
   - Dropped NaN values, reducing the dataset from 1258 to 1149 rows.
   - Scaled data to [0, 1] using MinMaxScaler for LSTM compatibility.
 
-
 2. **Time Series Preparation**:
   - Created 60-day sequences (X_train) and next-day targets (y_train), resulting in 1089 samples.
   - Reshaped data to (samples, timesteps, features)—(1089, 60, 1)—for LSTM input.
-
 
 3. **LSTM Model Design**:
   - Built a 4-layer LSTM with 100 units each, using return_sequences=True for stacking and False for the final output.
   - Added 20% dropout after each LSTM to prevent overfitting.
   - Used a single Dense layer for regression output, optimized with Adam and Mean Squared Error (MSE) loss.
 
-
 4. **Training & Evaluation**:
   - Trained for 20 epochs with a batch size of 32, reducing MSE from 0.0380 to 0.0045.
   - Learned to handle missing test data steps, adding preprocessing and prediction logic.
 
-
 5. **Visualization**:
   - Plotted actual vs. predicted Close prices, mastering inverse scaling with MinMaxScaler.
+
+## How It Works
+1. **Drawing Interface**: 
+   - Built with Pygame, the app creates a window where the user can draw by holding the left mouse button.
+   - White circles (4-pixel radius) are drawn at mouse positions, mimicking handwriting.
+
+2. **Image Processing**:
+   - When the mouse is released, the app finds the bounding box around the drawing.
+   - The drawn area is extracted, resized to 28x28 pixels (the size MNIST models expect), and normalized to a 0-1 range.
+
+3. **Prediction**:
+   - The processed image is fed into a pre-trained CNN (trained on the MNIST dataset).
+   - The model outputs a probability for each digit (0-9), and the highest one is selected.
+   - The prediction (e.g., "Five" for 5) is displayed in red above the drawing.
+
+4. **Reset**: Pressing Backspace clears the screen for a new drawing.
 
 
 ## Prerequisites
