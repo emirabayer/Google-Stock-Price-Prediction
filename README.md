@@ -1,12 +1,13 @@
 # Google Stock Price Prediction
 This project predicts Google stock prices using a Long Short-Term Memory (LSTM) neural network. Built with Python and Keras, it processes historical stock data, trains an LSTM model, and visualizes predictions. Through this, I explored time series forecasting, data preprocessing, and deep learning techniques.
 
+![image](https://github.com/user-attachments/assets/7cbfa8fb-f095-40d7-92d4-ab886e1b49a0)
+
 ## Dataset
 Source: Historical (2012-2016) Google stock data (Google_train_data.csv for training, Google_test_data.csv for testing).
 Features: Date, Open, High, Low, Close, Volume.
 Target: Close price for prediction.
 
-![image](https://github.com/user-attachments/assets/7cbfa8fb-f095-40d7-92d4-ab886e1b49a0)
 
 ## Learning Process & Knowledge Gained
 1. **Data Preprocessing**:
