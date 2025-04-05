@@ -33,23 +33,6 @@ This project predicts Google stock prices using a Long Short-Term Memory (LSTM) 
 5. **Visualization**:
    - Plotted actual vs. predicted Close prices, mastering inverse scaling with MinMaxScaler.
 
-## How It Works
-1. **Data Preprocessing**: 
-   - Converted Close from string to numeric, handling commas with pd.to_numeric(errors='coerce').
-   - Dropped NaN values, reducing the dataset from 1258 to 1149 rows.
-   - Scaled data to [0, 1] using MinMaxScaler for LSTM compatibility.
-
-2. **Image Processing**:
-   - When the mouse is released, the app finds the bounding box around the drawing.
-   - The drawn area is extracted, resized to 28x28 pixels (the size MNIST models expect), and normalized to a 0-1 range.
-
-3. **Prediction**:
-   - The processed image is fed into a pre-trained CNN (trained on the MNIST dataset).
-   - The model outputs a probability for each digit (0-9), and the highest one is selected.
-   - The prediction (e.g., "Five" for 5) is displayed in red above the drawing.
-
-4. **Reset**: Pressing Backspace clears the screen for a new drawing.
-
 
 ## Prerequisites
   - Python 3.6
