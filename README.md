@@ -14,9 +14,8 @@ This project predicts Google stock prices using a Long Short-Term Memory (LSTM) 
 1. **Data Preprocessing**:
   - Converted Close from string to numeric, handling commas with pd.to_numeric(errors='coerce').
   - Dropped NaN values, reducing the dataset from 1258 to 1149 rows.
-  - Scaled data to [0, 1] using MinMaxScaler for LSTM compatibility.
-<br>
-<br>
+  - Scaled data to [0, 1] using MinMaxScaler for LSTM compatibility. <br/>
+
 2. **Time Series Preparation**:
   - Created 60-day sequences (X_train) and next-day targets (y_train), resulting in 1089 samples.
   - Reshaped data to (samples, timesteps, features)—(1089, 60, 1)—for LSTM input.
