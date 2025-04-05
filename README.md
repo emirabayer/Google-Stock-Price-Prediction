@@ -4,8 +4,8 @@ This project predicts Google stock prices using a Long Short-Term Memory (LSTM) 
 ![image](https://github.com/user-attachments/assets/7cbfa8fb-f095-40d7-92d4-ab886e1b49a0)
 
 ## Dataset
-**Source**: Historical (2012-2016) Google stock data (Google_train_data.csv for training, Google_test_data.csv for testing).
-**Features**: Date, Open, High, Low, Close, Volume.
+**Source**: Historical (2012-2016) Google stock data (Google_train_data.csv for training, Google_test_data.csv for testing).  <br/>
+**Features**: Date, Open, High, Low, Close, Volume.  <br/>
 **Target**: Close price for prediction.
 
 
