@@ -6,7 +6,9 @@ Source: Historical (2012-2016) Google stock data (Google_train_data.csv for trai
 Features: Date, Open, High, Low, Close, Volume.
 Target: Close price for prediction.
 
-##Learning Process & Knowledge Gained
+![image](https://github.com/user-attachments/assets/7cbfa8fb-f095-40d7-92d4-ab886e1b49a0)
+
+## Learning Process & Knowledge Gained
 1. **Data Preprocessing**:
   - Converted Close from string to numeric, handling commas with pd.to_numeric(errors='coerce').
   - Dropped NaN values, reducing the dataset from 1258 to 1149 rows.
@@ -27,3 +29,7 @@ Target: Close price for prediction.
 
 5. **Visualization**:
   - Plotted actual vs. predicted Close prices, mastering inverse scaling with MinMaxScaler.
+
+## Prerequisites
+  - Python 3.6
+  - Python, NumPy, Pandas, Matplotlib, scikit-learn, keras
